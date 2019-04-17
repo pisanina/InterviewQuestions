@@ -6,7 +6,18 @@ namespace InterviewQuestions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Please enter array:");
+           
+            Console.WriteLine();
+
+            Array[] Reverse(Array[] data)
+            {
+
+                for (i=data.Length; i=0; i--)
+                {
+
+                }
+            }
         }
     }
 }
