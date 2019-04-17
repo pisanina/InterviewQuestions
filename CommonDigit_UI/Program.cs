@@ -16,7 +16,7 @@ namespace CommonDigit_UI
             Int32.TryParse(Console.ReadLine(), out numberOfIntegers);
             if(numberOfIntegers<2 || numberOfIntegers>20)
             {
-                Console.WriteLine("Sorry , we accept number between 2 and 20");
+                Console.WriteLine("Sorry, we accept numbers between 2 and 20");
                 Console.Read();
                 return;
             }

@@ -19,13 +19,15 @@ namespace FindingPrimes_UI
             for (int i = 0; i < cases; i++)
             {
 
-                Console.WriteLine("Plese enter start and end of range");
+                Console.WriteLine("Please enter start and end of range");
                 string[] values = Console.ReadLine().Split(" ");
+
                 if (values.Length != 2)
                 {
                     Console.WriteLine("Sorry You were supposed to provide two values");
                     return;
                 }
+                CheckElementsAreIntegers(values);
 
                 Range range = new Range(
                     int.Parse(values[0]),
@@ -33,7 +35,8 @@ namespace FindingPrimes_UI
                 );
                 if (!range.IsValid())
                 {
-                    Console.WriteLine("Sorry start must be smaller or equal to end");
+                    Console.WriteLine("Sorry invalid input");
+                    Console.Read();
                     return;
                 }
                 ranges.Add(range);
@@ -43,8 +46,22 @@ namespace FindingPrimes_UI
             {
                int howManyPrimes = _findingPrimes.NumberOfPrimesInRange(r);
                Console.WriteLine(howManyPrimes);
+               Console.Read();
             }
 
+        }
+
+        static void CheckElementsAreIntegers(string[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (!Int32.TryParse(array[i], out int number))
+                {
+                    Console.WriteLine("Sorry You were supposed to provide integers");
+                    Console.Read();
+                    Environment.Exit(0);
+                }
+            }
         }
     }
 }

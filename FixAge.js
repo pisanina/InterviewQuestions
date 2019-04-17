@@ -4,8 +4,8 @@ function fixage(a) {
         alert("Parameter has to be an array");
         return;
     }
-    if (a.find(isNotInteger)) {
-        alert("Parameter has to be an array of integers");
+    if (a.find(isInputInValid)) {
+        alert("Parameter has to be an array of integers between 0 and 100");
         return;
     }
     var filteredByAge = a.filter(isInRange);
@@ -13,13 +13,13 @@ function fixage(a) {
         return "NA";
 
     return filteredByAge.join(",");
+}
 
+function isInputInValid(i) {
+    return !Number.isInteger(i) || i < 0 || i > 100;
 }
 
 function isInRange(i) {
     return i >= 18 && i <= 60;
 }
 
-function isNotInteger(i) {
-    return !Number.isInteger(i);
-}

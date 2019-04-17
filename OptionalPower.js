@@ -1,11 +1,11 @@
 
-function optionalPow(x, y) {
-    if (isNaN(x) || isNaN(y)) {
+function optionalPow(a, b) {
+    if (isNaN(a) || isNaN(b)) {
         alert("Parameters have to be numbers");
         return;
     }
-    if (confirm("Is x the base?"))
-        return Math.pow(x, y);
-    return Math.pow(y, x);
+    if (confirm("Is a the base?"))
+        return Math.pow(a, b);
+    return Math.pow(b, a);
 }
 

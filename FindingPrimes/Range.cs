@@ -7,7 +7,8 @@
 
         public bool IsValid()
         {
-            return Start <= End;
+            return (Start >= 1 && End >= Start && End <= 1000000000 && (End - Start) <= 100000);
+                
         }
 
         public Range(int start, int end)

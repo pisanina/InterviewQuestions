@@ -19,8 +19,8 @@ namespace DigitSum_Tests
         [Test]
         public void AcceptanceCriteriaCase1()
         {
-            List<int> input = new List<int>{2,4,3};
-            int actualResult =_digitSumService.MaxSumOfDigits(input);
+            List<uint> input = new List<uint>{2,4,3};
+            uint actualResult =_digitSumService.MaxSumOfDigits(input);
             Assert.AreEqual(1, actualResult);
         }
 
@@ -28,16 +28,16 @@ namespace DigitSum_Tests
         [Test]
         public void AcceptanceCriteriaCase2()
         {
-            List<int> input = new List<int>{20,21,19};
-            int actualResult =_digitSumService.MaxSumOfDigits(input);
+            List<uint> input = new List<uint>{20,21,19};
+            uint actualResult =_digitSumService.MaxSumOfDigits(input);
             Assert.AreEqual(2, actualResult);
         }
 
         [Test]
         public void IfMoreThanOneReturnTheGreatest()
         {
-            List<int> input = new List<int>{21,12};
-            int actualResult =_digitSumService.MaxSumOfDigits(input);
+            List<uint> input = new List<uint>{21,12};
+            uint actualResult =_digitSumService.MaxSumOfDigits(input);
             Assert.AreEqual(1, actualResult);
         }
 

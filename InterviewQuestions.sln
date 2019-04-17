@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitSum", "DigitSum\DigitS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitSum_Tests", "DigitSum_Tests\DigitSum_Tests.csproj", "{E18412B7-0A3F-40FA-9AC9-5AA66E884A8C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F74B0ACA-2989-424B-BB4C-8252D2803251}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Javascript tasks", "Javascript tasks", "{F74B0ACA-2989-424B-BB4C-8252D2803251}"
 	ProjectSection(SolutionItems) = preProject
 		FixAge.js = FixAge.js
 		OptionalPower.js = OptionalPower.js

@@ -20,6 +20,8 @@ namespace FindingPrimes_Tests
         [TestCase(1, 10, 4)]
         [TestCase(10, 20, 4)]
         [TestCase(100, 200, 21)]
+        [TestCase(2, 7, 4)]
+
         public void CaseOne(int start, int end, int expectedResult)
         {
            int actualResult = _findingPrimesServices.NumberOfPrimesInRange(new Range(start,end));

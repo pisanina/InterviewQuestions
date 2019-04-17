@@ -30,6 +30,9 @@ namespace ExistingPowersOf2_UI
 
         static void PrintResult(ICollection<UInt32> result)
         {
+            if(result.Count==0)
+                Console.WriteLine("NA");
+
             Console.WriteLine(String.Join(", ", result));
             Console.Read();
         }

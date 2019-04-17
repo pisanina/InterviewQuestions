@@ -1,40 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DigitSum
 {
     public class DigitSumService
     {
-
-        public int SumOfDigits(int number)
+        public uint MaxSumOfDigits(List<uint> input)
         {
-            int dec, sum  = 0;
-            while (number > 0)
-            {
-                dec = number % 10;
-                sum += dec;
-                number = number / 10;
-            }
-            return sum;
-        }
+            List<Number> numbers= new List<Number>();
 
-        public int MaxSumOfDigits(List<int> input)
-        {
-            int maxSum = 0;
-            int itemSum = 0;
-            int indexOfMaxValue = 0;
+            for(uint i=0; i< input.Count; ++i)
+                numbers.Add(new Number(input[(int)i], i));
 
-            for (int i = 0; i < input.Count; i++)
-            {
-                itemSum = SumOfDigits(input[i]);
-                if (itemSum >= maxSum)
-                { 
-                    maxSum = itemSum;
-                    indexOfMaxValue = i;
-                }
-            }
-            return indexOfMaxValue;
-
+            return numbers.OrderByDescending(n => n.SumOfDigits)
+                .ThenByDescending(n => n.Index).First().Index;
         }
     }
 }

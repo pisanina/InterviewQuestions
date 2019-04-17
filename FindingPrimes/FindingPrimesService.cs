@@ -27,7 +27,7 @@ namespace FindingPrimes
         {
             int howManyPrimes = 0;
 
-            for (int i = r.Start; i < r.End; i++)
+            for (int i = r.Start; i <= r.End; i++)
             {
                 if (IsItPrime(i))
                     howManyPrimes++;
